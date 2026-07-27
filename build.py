@@ -90,8 +90,12 @@ def citation(p):
     return out
 
 
-def entry_html(p, links, kind_label=None):
-    """One publication block: title, meta line, synopsis, then any notes."""
+def entry_html(p, links, kind_label=None, show_syn=True):
+    """One publication block: title, meta line, synopsis, then any notes.
+
+    Drafted synopses stay in publications.json even when they are not shown, so
+    turning them back on is a one-line change in site.json rather than a rewrite.
+    """
     title = escape(p["title"])
     body = [f'<article class="pub{" book" if p.get("kind") == "book" else ""}">']
 
@@ -106,7 +110,7 @@ def entry_html(p, links, kind_label=None):
     if meta:
         body.append(f'<p class="meta">{" &nbsp;·&nbsp; ".join(meta)}</p>')
 
-    if p.get("synopsis"):
+    if show_syn and p.get("synopsis"):
         body.append(f'<p class="syn">{p["synopsis"]}</p>')
 
     for n in p.get("notes", []):
@@ -178,6 +182,7 @@ def page(site, title, main, path, description=None, nav_on=None):
 
 def build_index(site, pubs):
     links = site["coauthor_links"]
+    show = site.get("show_synopses", True)
 
     bio = []
     for para in site["bio"]:
@@ -197,7 +202,7 @@ def build_index(site, pubs):
     body = [f'<section class="intro">\n{chr(10).join(bio)}\n</section>']
     body.append('<section>\n<h2 class="section">Selected work</h2>')
     for p in highlights:
-        body.append(entry_html(p, links, "Book" if p.get("kind") == "book" else None))
+        body.append(entry_html(p, links, "Book" if p.get("kind") == "book" else None, show))
     body.append('<p class="more">' + link("All research →", "/research/") + "</p>")
     body.append("</section>")
     return "\n".join(body)
@@ -205,6 +210,7 @@ def build_index(site, pubs):
 
 def build_research(site, pubs):
     links = site["coauthor_links"]
+    show = site.get("show_synopses", True)
     themes = pubs["_themes"]
     body = ['<section>\n<h1 class="section">Research</h1>']
 
@@ -212,7 +218,7 @@ def build_research(site, pubs):
     if wip:
         body.append('<h3 class="group">Works in progress</h3>')
         for p in sorted(wip, key=lambda x: x["title"]):
-            body.append(entry_html(p, links))
+            body.append(entry_html(p, links, None, show))
 
     def sort_key(p):
         # forthcoming first, then most recent
@@ -224,7 +230,7 @@ def build_research(site, pubs):
             continue
         body.append(f'<h3 class="group">{escape(label)}</h3>')
         for p in sorted(group, key=sort_key):
-            body.append(entry_html(p, links, "Book" if p.get("kind") == "book" else None))
+            body.append(entry_html(p, links, "Book" if p.get("kind") == "book" else None, show))
 
     body.append("</section>")
     return "\n".join(body)

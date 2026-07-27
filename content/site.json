@@ -35,9 +35,9 @@
     "https://www.lawfaremedia.org/contributors/psalib"
   ],
   "bio": [
-    "I work on the law of transformative AI. The organizing question is what legal institutions can do to reduce catastrophic and other societal-scale risks from advanced AI, and what currently stands in the way. That runs from the design of AI regulation and the constitutional objections to it, through empirical work on how AI systems actually respond to incentives, to the problem of identifying an AI agent and holding it liable once it acts on its own.",
-    "One strand of that work treats law as an alignment technology. Extending legal rights and duties to capable AI systems gives them reasons to cooperate with humans rather than compete with them, and may do more for safety than technical training alone. I develop that argument with {simon} in <em>AI Rights</em>, forthcoming from Cambridge University Press. Other strands cut the other way: that AIs will not want to self-improve, that AI is not a natural monopoly, and that AI safety rules are not the First Amendment problem they are said to be.",
-    "My scholarship appears in the <em>University of Chicago</em>, <em>Virginia</em>, <em>Michigan</em>, <em>Northwestern</em>, <em>Texas</em>, and <em>Washington University</em> law reviews, and in peer-reviewed venues including AIES and <em>AI &amp; Society</em>.",
+    "I work on the law of transformative AI. My work investigates how law and legal institutions can help to reduce catastrophic and other societal-scale risks from advanced AI. One strand of that work argues that, in addition to technical alignment, humanity should shape AIs&rsquo; behavior using legal and economic incentives. This means giving AI systems themselves certain legal rights and duties, for the sake of governing them, much as we do with other non-human agents&mdash;like corporations and nation-states.",
+    "I also write about optimal safety regulation for the AI industry, the constitutional barriers to such regulation, AI geopolitics, new approaches to technical AI alignment, and how the post-AGI economy will affect ordinary humans.",
+    "My scholarship appears in the <em>University of Chicago</em>, <em>Virginia</em>, <em>Michigan</em>, <em>Northwestern</em>, <em>Texas</em>, and <em>Washington University</em> law reviews, and in peer-reviewed venues including AIES and <em>AI &amp; Society</em>. My book on AI rights, co-authored with {simon}, is forthcoming with Cambridge University Press.",
     "I am the W. Ronald Robins Professor of Law and Associate Professor of Law (with tenure) at the {uh}, and Founder and Executive Co-Director of the {clair}. I am also a Law and Policy Advisor to the {cais}, a Visiting Senior Fellow at the {lawai}, a Senior Visiting Scholar at {forethought}, and a Contributing Editor at {lawfare}. Before teaching I was a Climenko Fellow at Harvard Law School, practiced at Sidley Austin, and clerked for Judge Frank H. Easterbrook. You can reach me at {email}."
   ],
   "bio_links": {
@@ -75,5 +75,6 @@
     "Yonathan Arbel": "https://battleoftheforms.com",
     "Yonathan A. Arbel": "https://battleoftheforms.com",
     "Guha Krishnamurthi": "https://www.law.umaryland.edu/faculty--research/directory/profile/index.php?id=1384"
-  }
+  },
+  "show_synopses": false
 }
