@@ -288,37 +288,6 @@ def build_talks(site, data):
 # -------------------------------------------------------------------- main
 
 
-def redirect_page(site, target):
-    """
-    A landing page for a URL the old Google Sites site used to own.
-
-    Google Sites answered the apex with a *permanent* redirect to /home, and
-    browsers cache those hard — so visitors who saw the old site keep being sent
-    to a path that no longer exists. Old inbound links point there too.
-
-    This is a 200 with a canonical tag rather than a true 301, because the site
-    is served as static assets with no Worker script. Search engines treat the
-    combination as a soft redirect and consolidate on the canonical. If a real
-    301 is ever wanted, add a Cloudflare Redirect Rule — it runs before the
-    assets layer and will take precedence over this page automatically.
-    """
-    url = site["domain"] + target
-    return f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url={target}">
-<link rel="canonical" href="{url}">
-<title>{escape(site['name'])}</title>
-<style>body{{font-family:Charter,Georgia,serif;background:#faf9f5;color:#17150f;
-margin:0;display:grid;place-items:center;height:100vh}}a{{color:#7d3232}}</style>
-<script>location.replace({json.dumps(target)});</script>
-</head>
-<body><p>This page has moved. <a href="{target}">Continue to {escape(site['name'])}</a>.</p></body>
-</html>
-"""
-
-
 def write(path, text):
     full = os.path.join(PUBLIC, path.lstrip("/"))
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -366,8 +335,18 @@ def main():
           '<section class="intro"><p>That page does not exist. '
           '<a href="/">Return to the homepage</a>.</p></section>', "/404.html"))
 
-    for old, new in site.get("legacy_redirects", {}).items():
-        write(old.strip("/") + "/index.html", redirect_page(site, new))
+    # Paths the old Google Sites site owned. Google answered the apex with a
+    # *permanent* redirect to /home, and browsers cache those for a long time,
+    # so visitors who saw the old site are still sent there.
+    #
+    # These MIRROR the homepage rather than redirecting to it. A redirect here
+    # would loop: the visitor's cached 301 sends "/" straight back to /home,
+    # and anything at /home pointing at "/" completes the cycle. Serving the
+    # real page breaks the loop — you land on the site wherever you entered.
+    # The canonical tag still points at "/", so search engines consolidate.
+    for old in site.get("legacy_paths", []):
+        write(old.strip("/") + "/index.html",
+              page(site, site["name"], build_index(site, pubs), "/"))
 
     for f in os.listdir(ASSETS):
         if not f.startswith("."):

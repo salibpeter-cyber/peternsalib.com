@@ -78,7 +78,7 @@
   },
   "show_synopses": false,
   "portrait_size": 172,
-  "legacy_redirects": {
-    "/home": "/"
-  }
+  "legacy_paths": [
+    "/home"
+  ]
 }
