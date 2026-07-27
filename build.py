@@ -125,6 +125,7 @@ def entry_html(p, links, kind_label=None, show_syn=True):
 
 def page(site, title, main, path, description=None, nav_on=None):
     desc = description or site["meta_description"]
+    sz = site.get("portrait_size", 148)
     canonical = site["domain"] + path
     nav = []
     for n in site["nav"]:
@@ -164,7 +165,7 @@ def page(site, title, main, path, description=None, nav_on=None):
 <body>
 <div class="shell">
   <aside class="rail">
-    <img class="portrait" src="{site['headshot']}" alt="{escape(site['name'], quote=True)}" width="148" height="148">
+    <img class="portrait" src="{site['headshot']}" alt="{escape(site['name'], quote=True)}" width="{sz}" height="{sz}">
     <h1 class="brand"><a href="/">{escape(site['name'])}</a></h1>
     <nav>{"".join(nav)}</nav>
   </aside>

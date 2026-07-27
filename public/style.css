@@ -33,10 +33,10 @@ a:hover{border-bottom-color:var(--link)}
 
 /* left rail: portrait, name and nav travel with the reader */
 .shell{display:flex;gap:4rem;max-width:64rem;margin:0 auto;padding:0 2.2rem}
-.rail{flex:0 0 178px;align-self:flex-start;position:sticky;top:0;padding:3.6rem 0 2rem}
+.rail{flex:0 0 200px;align-self:flex-start;position:sticky;top:0;padding:3.6rem 0 2rem}
 main{flex:1 1 auto;min-width:0;max-width:40rem;padding-bottom:5rem}
 
-.portrait{display:block;width:148px;height:148px;object-fit:cover;border-radius:50%;
+.portrait{display:block;width:172px;height:172px;object-fit:cover;border-radius:50%;
   background:var(--bg);margin:0 0 1.25rem}
 .brand{font-size:1.12rem;font-weight:600;letter-spacing:-.008em;margin:0 0 1.35rem;
   line-height:1.25}
@@ -56,7 +56,7 @@ h1.brand{font-size:1.12rem}
   body{font-size:17px}
   .shell{display:block;padding:0 1.5rem;max-width:44rem}
   .rail{position:static;padding:2.4rem 0 1.1rem;display:block}
-  .portrait{width:112px;height:112px;margin-bottom:1rem}
+  .portrait{width:128px;height:128px;margin-bottom:1rem}
   .brand{margin-bottom:.9rem}
   nav{font-size:.71rem;letter-spacing:.065em}
   nav a{display:inline-block;margin:0 1.05rem .35rem 0}
