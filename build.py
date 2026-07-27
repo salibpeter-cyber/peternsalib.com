@@ -90,7 +90,7 @@ def citation(p):
     return out
 
 
-def entry_html(p, links, kind_label=None, show_syn=True):
+def entry_html(p, links, kind_label=None, show_syn=True, show_notes=True):
     """One publication block: title, meta line, synopsis, then any notes.
 
     Drafted synopses stay in publications.json even when they are not shown, so
@@ -113,8 +113,11 @@ def entry_html(p, links, kind_label=None, show_syn=True):
     if show_syn and p.get("synopsis"):
         body.append(f'<p class="syn">{p["synopsis"]}</p>')
 
-    for n in p.get("notes", []):
-        body.append(f'<p class="note">{escape(n)}</p>')
+    # The homepage is a highlight reel; prizes and workshop selections belong on
+    # the full research list rather than under the five featured pieces.
+    if show_notes:
+        for n in p.get("notes", []):
+            body.append(f'<p class="note">{escape(n)}</p>')
 
     body.append("</article>")
     return "\n".join(body)
@@ -208,7 +211,7 @@ def build_index(site, pubs):
     body = [f'<section class="intro">\n{chr(10).join(bio)}\n</section>']
     body.append('<section>\n<h2 class="section">Selected work</h2>')
     for p, label in highlights:
-        body.append(entry_html(p, links, label, show))
+        body.append(entry_html(p, links, label, show, show_notes=False))
     body.append('<p class="more">' + link("All research →", "/research/") + "</p>")
     body.append("</section>")
     return "\n".join(body)
