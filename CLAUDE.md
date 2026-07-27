@@ -10,6 +10,32 @@ does not want to run a toolchain.
 
 ---
 
+## If you were asked to "check the site against my CV"
+
+This is the command. It works from any directory — the script resolves its own paths.
+
+```bash
+python3 "/Users/petersalib/Library/CloudStorage/Dropbox/Claude/Website Update/peternsalib.com/drift.py"
+```
+
+It must print **"No drift."** Anything else means the CV and the site disagree; the output
+names the entries in both directions. Fix by editing `content/publications.json` to match
+the CV — the CV is the source of truth — then rebuild and push:
+
+```bash
+cd "/Users/petersalib/Library/CloudStorage/Dropbox/Claude/Website Update/peternsalib.com" \
+  && python3 build.py && git add -A && git commit -m "Update publications" && git push
+```
+
+Live about 40 seconds after the push. To check a CV somewhere other than the default,
+pass the path as an argument or set `CV_PATH`.
+
+Note that differences are sometimes intentional — check `EXPECTED_OFF_SITE` in `drift.py`
+and `no_link_reason` in the JSON before "fixing" anything, and see the deliberate
+decisions below.
+
+---
+
 ## The premise
 
 The old site was not ugly. It was unreachable — the content lived in a Google Sites admin
@@ -129,11 +155,15 @@ that answer was about today's CV, not tomorrow's.
 
 ## Routine
 
+Run from inside the repo:
+
 ```bash
 python3 drift.py        # after every CV edit — must print "No drift."
 python3 build.py        # regenerate public/
 python3 build.py --check
 git add -A && git commit && git push    # live in ~40s
 ```
+
+From anywhere else, call the scripts by absolute path — see the top of this file.
 
 Never hand-edit `public/`. It is generated and will be overwritten.
