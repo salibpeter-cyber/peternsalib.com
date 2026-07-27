@@ -32,6 +32,7 @@ Push to `main` and the deploy runs automatically.
 | `build.py` | The generator. Python standard library only, deliberately. |
 | `drift.py` | CV-to-site diff. Run after every CV edit. |
 | `wrangler.json` | Cloudflare deploy config. Serves `public/` as static assets. |
+| `CLAUDE.md` | Orientation for an agent picking this up: where the source material lives, which decisions were deliberate, and the traps. |
 
 ## Checks
 
