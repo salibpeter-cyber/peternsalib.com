@@ -1,15 +1,17 @@
-/* Adapted from Simon Goldstein's site with his permission.
+/* Layout and structure adapted from Simon Goldstein's site with his permission;
+   the palette and typeface are deliberately our own so the two sites read as
+   siblings rather than copies. Charter for text, oxblood for links.
 
    Light only, deliberately. The site should look the same to everyone who opens it
    rather than inverting itself according to a visitor's system setting — otherwise
    you never know what impression a funder actually received. */
 :root{
-  --bg:#fdfcfa;
-  --fg:#141310;
-  --muted:#6f6a5e;
-  --rule:#e6e2d9;
-  --rule-soft:#efece5;
-  --link:#2c4667;
+  --bg:#faf9f5;
+  --fg:#17150f;
+  --muted:#6b6558;
+  --rule:#e4e0d5;
+  --rule-soft:#eeeae0;
+  --link:#7d3232;
   --tag-bg:#efece4;
   --accent:#8a6a3a;
 }
@@ -19,7 +21,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--fg);
-  font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  font-family:Charter,"Bitstream Charter","Sitka Text",Cambria,Georgia,serif;
   font-size:18px;
   line-height:1.66;
   -webkit-font-smoothing:antialiased;
@@ -81,7 +83,7 @@ h3.group:first-of-type{margin-top:0}
 .pub .t{font-weight:600;line-height:1.34;display:block;margin-bottom:.2rem;letter-spacing:-.004em}
 .pub .t a{color:var(--fg);border-bottom:1px solid transparent}
 .pub .t a:hover{color:var(--link);border-bottom-color:var(--link)}
-.pub.book{border:1px solid var(--rule);border-radius:3px;background:#faf8f3;
+.pub.book{border:1px solid var(--rule);border-radius:3px;background:#f6f3ea;
   padding:1.15rem 1.4rem 1.3rem;margin:0 -1.4rem 2rem}
 .pub .kind{display:block;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
   font-size:.655rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
