@@ -11,6 +11,16 @@ which is committed so the host needs no build step.
 
 Never hand-edit anything in `public/` — it is generated and will be overwritten.
 
+## Deployment
+
+Cloudflare Workers Static Assets, configured in `wrangler.json`. There is no
+build step on Cloudflare's side: `public/` is committed, and `wrangler deploy`
+uploads it as-is. `not_found_handling: "404-page"` makes unmatched paths return
+a real 404 from `404.html`, rather than serving the homepage with a 200 and
+letting search engines index every typo as duplicate content.
+
+Push to `main` and the deploy runs automatically.
+
 ## Files
 
 | Path | What it is |
@@ -20,6 +30,8 @@ Never hand-edit anything in `public/` — it is generated and will be overwritte
 | `content/talks.json` | Presentations and media appearances. |
 | `assets/` | Stylesheet, headshot, CV PDF, favicon, social card. Copied verbatim into `public/`. |
 | `build.py` | The generator. Python standard library only, deliberately. |
+| `drift.py` | CV-to-site diff. Run after every CV edit. |
+| `wrangler.json` | Cloudflare deploy config. Serves `public/` as static assets. |
 
 ## Checks
 
