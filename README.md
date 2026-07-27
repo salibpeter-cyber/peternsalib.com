@@ -28,7 +28,18 @@ python3 build.py --check
 ```
 
 Lists entries with no link and no synopsis, and exits non-zero if anything is
-unlinked. Run before pushing.
+unlinked. Entries carrying a `no_link_reason` are reported as decisions, not
+errors. Run before pushing.
+
+```
+python3 drift.py
+```
+
+Parses the CV and diffs it against `content/publications.json`, exiting non-zero
+on any unexplained difference in either direction. **Run this after every CV
+edit** — it is what makes "update the CV, update the site" one action rather
+than a good intention. Differences that are deliberate go in `EXPECTED_OFF_SITE`
+at the top of the file, with a reason.
 
 ## Conventions worth keeping
 
