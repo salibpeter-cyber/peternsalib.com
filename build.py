@@ -290,14 +290,20 @@ def main():
     site, pubs, talks = load("site.json"), load("publications.json"), load("talks.json")
 
     if "--check" in sys.argv:
-        missing_url, missing_syn = [], []
+        pubs_by_id = {e["id"]: e for g in ("publications", "works_in_progress", "popular")
+                      for e in pubs[g]}
+        # An entry with no_link_reason is a decision, not an omission. Keeping
+        # them explicit is what stops --check from crying wolf on every run.
+        missing_url, missing_syn, deliberate = [], [], []
         for grp in ("publications", "works_in_progress", "popular"):
             for p in pubs[grp]:
                 if not p.get("url"):
-                    missing_url.append(p["id"])
+                    (deliberate if p.get("no_link_reason") else missing_url).append(p["id"])
                 if grp != "popular" and not p.get("synopsis"):
                     missing_syn.append(p["id"])
         print(f"{len(missing_url)} without a link: {', '.join(missing_url) or '—'}")
+        for i in deliberate:
+            print(f"  (deliberately unlinked: {i} — {pubs_by_id[i]['no_link_reason']})")
         print(f"{len(missing_syn)} without a synopsis: {', '.join(missing_syn) or '—'}")
         return 1 if missing_url else 0
 

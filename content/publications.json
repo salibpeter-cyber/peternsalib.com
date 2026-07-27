@@ -539,7 +539,8 @@
       ],
       "theme": "ai-regulation",
       "url": "",
-      "synopsis": "Trump and Sanders both say they want to nationalize AI, and no two proposals mean the same thing by it. This Article sorts out what nationalization could mean, and which version is worth wanting."
+      "synopsis": "Trump and Sanders both say they want to nationalize AI, and no two proposals mean the same thing by it. This Article sorts out what nationalization could mean, and which version is worth wanting.",
+      "no_link_reason": "Draft not yet public"
     },
     {
       "id": "ai-rights-economic-flourishing",
@@ -796,7 +797,8 @@
       "venue": "Dorf on Law",
       "date": "May 23, 2022",
       "year": 2022,
-      "url": ""
+      "url": "",
+      "no_link_reason": "Deliberately unlinked"
     }
   ]
 }
