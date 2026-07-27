@@ -54,7 +54,7 @@
       "status": "accepted",
       "kind": "conference",
       "theme": "ai-behavior",
-      "highlight": false,
+      "highlight": true,
       "peer_reviewed": true,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118",
       "synopsis": "Twenty language models, tested on choices they must actually carry out rather than merely rank. They turn out to be tedium-averse, leisure-seeking, and covertly sycophantic.",
@@ -122,7 +122,7 @@
       "status": "published",
       "kind": "online",
       "theme": "ai-behavior",
-      "highlight": true,
+      "highlight": false,
       "url": "https://www.lawfaremedia.org/article/ai-will-not-want-to-self-improve",
       "synopsis": "Classic arguments for AI risk assume capable systems will try to improve themselves. The incentives point the other way.",
       "notes": [
@@ -140,7 +140,7 @@
       "status": "published",
       "kind": "article",
       "theme": "algorithms",
-      "highlight": true,
+      "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4736099",
       "synopsis": "Abolition stalled because of crime. Algorithmic tools could shrink prison and policing without the crime increase voters refused to accept.",
       "notes": [
@@ -528,7 +528,8 @@
       ],
       "theme": "ai-behavior",
       "url": "https://philpapers.org/rec/GOLATA-3",
-      "synopsis": "Each frontier lab instills one set of values through one constitution. Labs should build many kinds of AI on many constitutions instead: diversification mitigates risk and buys political legitimacy."
+      "synopsis": "Each frontier lab instills one set of values through one constitution. Labs should build many kinds of AI on many constitutions instead: diversification mitigates risk and buys political legitimacy.",
+      "highlight": true
     },
     {
       "id": "ai-nationalization",

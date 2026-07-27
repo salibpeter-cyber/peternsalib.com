@@ -199,11 +199,16 @@ def build_index(site, pubs):
         )
         bio.append(f"<p>{t}</p>")
 
-    highlights = [p for p in pubs["publications"] if p.get("highlight")]
+    # Works in progress can be featured too, labelled so they do not read as
+    # published work.
+    highlights = [(p, "Book" if p.get("kind") == "book" else None)
+                  for p in pubs["publications"] if p.get("highlight")]
+    highlights += [(p, "Work in progress")
+                   for p in pubs["works_in_progress"] if p.get("highlight")]
     body = [f'<section class="intro">\n{chr(10).join(bio)}\n</section>']
     body.append('<section>\n<h2 class="section">Selected work</h2>')
-    for p in highlights:
-        body.append(entry_html(p, links, "Book" if p.get("kind") == "book" else None, show))
+    for p, label in highlights:
+        body.append(entry_html(p, links, label, show))
     body.append('<p class="more">' + link("All research →", "/research/") + "</p>")
     body.append("</section>")
     return "\n".join(body)
