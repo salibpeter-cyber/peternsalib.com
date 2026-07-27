@@ -32,7 +32,9 @@ except ImportError:
     sys.exit("needs python-docx:  pip3 install python-docx")
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_CV = "/Users/petersalib/Library/CloudStorage/Dropbox/CV-PeterSalib.docx"
+# Overridable so the repo carries no hardcoded home directory.
+DEFAULT_CV = os.environ.get("CV_PATH") or os.path.expanduser(
+    "~/Library/CloudStorage/Dropbox/CV-PeterSalib.docx")
 
 # Sections of the CV that correspond to things the site lists.
 PUB_SECTIONS = {

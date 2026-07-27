@@ -1,7 +1,7 @@
 {
   "_comment": "Identity, bio, navigation and coauthor links. Bio prose is adapted from Peter's own Google Sites text and his CV; titles follow CV-PeterSalib.docx (20 July 2026). coauthor_links: only add a URL after verifying the person by BOTH name and field — an unlinked name is better than a wrong link.",
   "name": "Peter N. Salib",
-  "domain": "https://www.peternsalib.com",
+  "domain": "https://peternsalib.com",
   "email": "psalib@central.uh.edu",
   "headshot": "/headshot.jpg",
   "meta_description": "Peter N. Salib works on the law of transformative AI: the design of AI regulation, the constitutional barriers to it, empirical work on how AI systems respond to incentives, and legal rights and liability for AI agents. W. Ronald Robins Professor of Law, University of Houston.",
