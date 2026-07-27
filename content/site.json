@@ -4,13 +4,30 @@
   "domain": "https://www.peternsalib.com",
   "email": "psalib@central.uh.edu",
   "headshot": "/headshot.jpg",
-  "meta_description": "Peter N. Salib works on law and AI risk. W. Ronald Robins Professor of Law, University of Houston; Executive Co-Director, Center for Law & AI Risk; Contributing Editor, Lawfare.",
+  "meta_description": "Peter N. Salib works on the law of transformative AI: the design of AI regulation, the constitutional barriers to it, empirical work on how AI systems respond to incentives, and legal rights and liability for AI agents. W. Ronald Robins Professor of Law, University of Houston.",
   "nav": [
-    { "label": "Research", "href": "/research/" },
-    { "label": "Talks", "href": "/talks/" },
-    { "label": "Public writing", "href": "/writing/" },
-    { "label": "SSRN", "href": "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2495884", "external": true },
-    { "label": "CV", "href": "/cv.pdf", "external": true }
+    {
+      "label": "Research",
+      "href": "/research/"
+    },
+    {
+      "label": "Talks",
+      "href": "/talks/"
+    },
+    {
+      "label": "Public writing",
+      "href": "/writing/"
+    },
+    {
+      "label": "SSRN",
+      "href": "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2495884",
+      "external": true
+    },
+    {
+      "label": "CV",
+      "href": "/cv.pdf",
+      "external": true
+    }
   ],
   "same_as": [
     "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2495884",
@@ -18,19 +35,45 @@
     "https://www.lawfaremedia.org/contributors/psalib"
   ],
   "bio": [
-    "I work on what law and legal institutions can do to reduce existential and other societal-scale risks from advanced AI. A running theme is law as an alignment technology: extending legal rights and duties to powerful AI systems can give them reasons to behave prosocially, and may make catastrophic outcomes less likely than technical training alone.",
-    "My scholarship appears in the <em>University of Chicago</em>, <em>Virginia</em>, <em>Michigan</em>, <em>Northwestern</em>, <em>Texas</em>, and <em>Washington University</em> law reviews. <em>AI Rights</em>, written with Simon Goldstein, is forthcoming from Cambridge University Press.",
+    "I work on the law of transformative AI. The organizing question is what legal institutions can do to reduce catastrophic and other societal-scale risks from advanced AI, and what currently stands in the way. That runs from the design of AI regulation and the constitutional objections to it, through empirical work on how AI systems actually respond to incentives, to the problem of identifying an AI agent and holding it liable once it acts on its own.",
+    "One strand of that work treats law as an alignment technology. Extending legal rights and duties to capable AI systems gives them reasons to cooperate with humans rather than compete with them, and may do more for safety than technical training alone. I develop that argument with {simon} in <em>AI Rights</em>, forthcoming from Cambridge University Press. Other strands cut the other way: that AIs will not want to self-improve, that AI is not a natural monopoly, and that AI safety rules are not the First Amendment problem they are said to be.",
+    "My scholarship appears in the <em>University of Chicago</em>, <em>Virginia</em>, <em>Michigan</em>, <em>Northwestern</em>, <em>Texas</em>, and <em>Washington University</em> law reviews, and in peer-reviewed venues including AIES and <em>AI &amp; Society</em>.",
     "I am the W. Ronald Robins Professor of Law and Associate Professor of Law (with tenure) at the {uh}, and Founder and Executive Co-Director of the {clair}. I am also a Law and Policy Advisor to the {cais}, a Visiting Senior Fellow at the {lawai}, a Senior Visiting Scholar at {forethought}, and a Contributing Editor at {lawfare}. Before teaching I was a Climenko Fellow at Harvard Law School, practiced at Sidley Austin, and clerked for Judge Frank H. Easterbrook. You can reach me at {email}."
   ],
   "bio_links": {
-    "uh": ["University of Houston Law Center", "https://www.law.uh.edu/faculty/main.asp?PID=6428"],
-    "clair": ["Center for Law & AI Risk", "https://www.lawandairisk.org"],
-    "cais": ["Center for AI Safety", "https://safe.ai"],
-    "lawai": ["Institute for Law & AI", "https://law-ai.org"],
-    "forethought": ["Forethought", "https://www.forethought.org"],
-    "lawfare": ["Lawfare", "https://www.lawfaremedia.org/contributors/psalib"]
+    "uh": [
+      "University of Houston Law Center",
+      "https://www.law.uh.edu/faculty/main.asp?PID=6428"
+    ],
+    "clair": [
+      "Center for Law & AI Risk",
+      "https://clair-ai.org"
+    ],
+    "cais": [
+      "Center for AI Safety",
+      "https://safe.ai"
+    ],
+    "lawai": [
+      "Institute for Law & AI",
+      "https://law-ai.org"
+    ],
+    "forethought": [
+      "Forethought",
+      "https://www.forethought.org"
+    ],
+    "lawfare": [
+      "Lawfare",
+      "https://www.lawfaremedia.org/contributors/psalib"
+    ],
+    "simon": [
+      "Simon Goldstein",
+      "https://simondgoldstein.com"
+    ]
   },
   "coauthor_links": {
-    "Simon Goldstein": "https://simondgoldstein.com"
+    "Simon Goldstein": "https://simondgoldstein.com",
+    "Yonathan Arbel": "https://battleoftheforms.com",
+    "Yonathan A. Arbel": "https://battleoftheforms.com",
+    "Guha Krishnamurthi": "https://www.law.umaryland.edu/faculty--research/directory/profile/index.php?id=1384"
   }
 }

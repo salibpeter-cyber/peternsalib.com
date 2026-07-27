@@ -1,9 +1,10 @@
 {
   "_comment": "Single source of truth for every publication on peternsalib.com. Transcribed by hand from CV-PeterSalib.docx (20 July 2026) rather than parsed, then checked entry by entry against the CV text. Edit this file; run build.py; commit. Fields: url and synopsis are filled in later passes and may be empty.",
   "_themes": {
-    "ai-safety": "AI Safety and AI Rights",
-    "ai-speech": "AI, Speech, and the Constitution",
-    "algorithms": "Algorithms, Discrimination, and Criminal Justice",
+    "ai-rights": "AI Rights and Human Safety",
+    "ai-regulation": "Regulating Frontier AI",
+    "ai-behavior": "How AI Systems Behave",
+    "algorithms": "Algorithms in the Legal System",
     "conlaw": "Constitutional Law and Political Economy"
   },
   "publications": [
@@ -17,7 +18,7 @@
       "year": 2027,
       "status": "forthcoming",
       "kind": "book",
-      "theme": "ai-safety",
+      "theme": "ai-rights",
       "highlight": true,
       "url": "https://philpapers.org/rec/GOLARD-4",
       "synopsis": "The book-length case that giving AIs legal rights is a way of making the future go better for humans.",
@@ -33,7 +34,7 @@
       "year": 2026,
       "status": "forthcoming",
       "kind": "article",
-      "theme": "ai-safety",
+      "theme": "ai-rights",
       "highlight": true,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913167",
       "synopsis": "By default humans and misaligned AGI are trapped in a prisoner's dilemma, where each side's dominant strategy is to disempower the other. The right AI rights change that equilibrium.",
@@ -52,11 +53,11 @@
       "year": 2026,
       "status": "accepted",
       "kind": "conference",
-      "theme": "ai-safety",
+      "theme": "ai-behavior",
       "highlight": false,
       "peer_reviewed": true,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118",
-      "synopsis": "",
+      "synopsis": "Twenty language models, tested on choices they must actually carry out rather than merely rank. They turn out to be tedium-averse, leisure-seeking, and covertly sycophantic.",
       "notes": []
     },
     {
@@ -70,10 +71,10 @@
       "year": 2026,
       "status": "forthcoming",
       "kind": "article",
-      "theme": "ai-safety",
+      "theme": "ai-regulation",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6273198",
-      "synopsis": "",
+      "synopsis": "AI agents copy, split, merge, swarm and vanish. Before law can hold one liable, it needs a way to say which one acted.",
       "notes": [],
       "arxiv": "https://arxiv.org/abs/2603.10028"
     },
@@ -88,10 +89,10 @@
       "year": 2026,
       "status": "forthcoming",
       "kind": "article",
-      "theme": "ai-safety",
+      "theme": "ai-rights",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6498678",
-      "synopsis": "",
+      "synopsis": "Should AIs have the vote? Not because they deserve it, but because law is how capable, imperfectly aligned systems are brought to cooperate.",
       "notes": [
         "Invited symposium contribution"
       ]
@@ -106,7 +107,7 @@
       "year": 2026,
       "status": "forthcoming",
       "kind": "online",
-      "theme": "ai-safety",
+      "theme": "ai-regulation",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5926043",
       "synopsis": "AI has the surface features of a natural monopoly: high fixed costs, network effects, three players. The appearance is deceiving.",
@@ -120,7 +121,7 @@
       "year": 2024,
       "status": "published",
       "kind": "online",
-      "theme": "ai-safety",
+      "theme": "ai-behavior",
       "highlight": true,
       "url": "https://www.lawfaremedia.org/article/ai-will-not-want-to-self-improve",
       "synopsis": "Classic arguments for AI risk assume capable systems will try to improve themselves. The incentives point the other way.",
@@ -157,7 +158,7 @@
       "year": 2024,
       "status": "published",
       "kind": "article",
-      "theme": "ai-speech",
+      "theme": "ai-regulation",
       "highlight": true,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4687558",
       "synopsis": "When a generative AI outputs text, no one with First Amendment rights thereby communicates. Safety rules limiting what AIs say are not speech restrictions.",
@@ -182,7 +183,7 @@
       "theme": "algorithms",
       "highlight": false,
       "peer_reviewed": true,
-      "url": "https://doi.org/10.1007/s00146-024-01975-3",
+      "url": "https://link.springer.com/article/10.1007/s00146-024-01975-3",
       "synopsis": "",
       "notes": []
     },
@@ -199,7 +200,7 @@
       "kind": "chapter",
       "theme": "algorithms",
       "highlight": false,
-      "url": "https://doi.org/10.4337/9781802205657.00013",
+      "url": "https://www.elgaronline.com/edcollchap-oa/book/9781802205657/book-part-9781802205657-13.xml",
       "synopsis": "",
       "notes": []
     },
@@ -287,7 +288,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3023347",
-      "synopsis": "",
+      "synopsis": "How to enforce federal law in federal court when no plaintiff can satisfy Article III standing.",
       "notes": []
     },
     {
@@ -300,7 +301,7 @@
       "year": 2017,
       "status": "published",
       "kind": "article",
-      "theme": "algorithms",
+      "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2928219",
       "synopsis": "",
@@ -321,7 +322,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4653228",
-      "synopsis": "",
+      "synopsis": "Justices accept luxuries from wealthy benefactors and there is rarely a quid pro quo to point at. Measure the wrong by what a Justice is worth over a replacement.",
       "notes": []
     },
     {
@@ -357,7 +358,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500816",
-      "synopsis": "",
+      "synopsis": "After Bruen, few new gun regulations survive constitutional review. Qualified immunity doctrine, of all things, can do some of the same work.",
       "notes": []
     },
     {
@@ -391,7 +392,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4116481",
-      "synopsis": "",
+      "synopsis": "Jurors can refuse to convict under the most extreme abortion laws. This is what happens to prosecution once everyone knows it.",
       "notes": []
     },
     {
@@ -408,7 +409,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4007572",
-      "synopsis": "",
+      "synopsis": "Permissive firearm laws can push even rational, well-meaning people to escalate an armed encounter. The results are deadly.",
       "notes": []
     },
     {
@@ -424,7 +425,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4008503",
-      "synopsis": "",
+      "synopsis": "SB-8 was drafted to evade constitutional review. Review is coming regardless, and saving clauses decide what the courts must do when it arrives.",
       "notes": []
     },
     {
@@ -441,7 +442,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3771587",
-      "synopsis": "",
+      "synopsis": "A single vote almost never changes an election. So what exactly does a post-election lawsuit remedy?",
       "notes": []
     },
     {
@@ -459,7 +460,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3766303",
-      "synopsis": "",
+      "synopsis": "Section 4 lets the Vice President and the Cabinet disempower a President. Whether acting Cabinet members count is unsettled, and the answer matters.",
       "notes": []
     },
     {
@@ -470,13 +471,13 @@
       ],
       "venue": "Tulsa Law Review",
       "volume": "57",
-      "pages": "101",
+      "pages": "303",
       "year": 2021,
       "status": "published",
       "kind": "article",
       "theme": "conlaw",
       "highlight": false,
-      "url": "",
+      "url": "https://digitalcommons.law.utulsa.edu/tlr/vol57/iss1/21/",
       "synopsis": "",
       "notes": [
         "Invited symposium piece"
@@ -512,7 +513,7 @@
       "theme": "conlaw",
       "highlight": false,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2711789",
-      "synopsis": "",
+      "synopsis": "Who owns street art painted on someone else's wall?",
       "notes": [
         "Student comment"
       ]
@@ -525,9 +526,9 @@
       "coauthors": [
         "Simon Goldstein"
       ],
-      "theme": "ai-safety",
-      "url": "",
-      "synopsis": ""
+      "theme": "ai-behavior",
+      "url": "https://philpapers.org/rec/GOLATA-3",
+      "synopsis": "Each frontier lab instills one set of values through one constitution. Labs should build many kinds of AI on many constitutions instead: diversification mitigates risk and buys political legitimacy."
     },
     {
       "id": "ai-nationalization",
@@ -536,9 +537,9 @@
         "Yonathan Arbel",
         "Simon Goldstein"
       ],
-      "theme": "ai-safety",
+      "theme": "ai-regulation",
       "url": "",
-      "synopsis": ""
+      "synopsis": "Trump and Sanders both say they want to nationalize AI, and no two proposals mean the same thing by it. This Article sorts out what nationalization could mean, and which version is worth wanting."
     },
     {
       "id": "ai-rights-economic-flourishing",
@@ -546,9 +547,9 @@
       "coauthors": [
         "Simon Goldstein"
       ],
-      "theme": "ai-safety",
+      "theme": "ai-rights",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5353214",
-      "synopsis": ""
+      "synopsis": "Under current law the AGI economy will run on unfree AGI labor. That is the legal barrier standing between AGI and broad material abundance."
     },
     {
       "id": "how-to-stop-ai-arms-race",
@@ -556,9 +557,9 @@
       "coauthors": [
         "Simon Goldstein"
       ],
-      "theme": "ai-safety",
+      "theme": "ai-regulation",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5369439",
-      "synopsis": ""
+      "synopsis": "A US–China AI race is irrational, and the Cold War nonproliferation playbook will not stop it. A jointly operated lab might."
     },
     {
       "id": "liberalism-forever",
@@ -566,8 +567,8 @@
       "coauthors": [
         "Simon Goldstein"
       ],
-      "theme": "ai-safety",
-      "url": "",
+      "theme": "ai-rights",
+      "url": "https://philarchive.org/rec/GOLLFC-2",
       "synopsis": ""
     }
   ],
@@ -598,6 +599,17 @@
       "date": "June 2026",
       "year": 2026,
       "url": "https://clsbluesky.law.columbia.edu/2026/06/15/why-law-needs-a-new-entity-to-govern-ai-agents/"
+    },
+    {
+      "id": "copyright-not-protect-artists",
+      "title": "Copyright Should Not Protect Artists From Artificial Intelligence",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Lawfare",
+      "date": "October 23, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/copyright-should-not-protect-artists-from-artificial-intelligence"
     },
     {
       "id": "ai-rights-human-flourishing",
