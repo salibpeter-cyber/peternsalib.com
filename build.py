@@ -163,6 +163,8 @@ def page(site, title, main, path, description=None, nav_on=None):
 <link rel="canonical" href="{canonical}">
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head>
 <body>
