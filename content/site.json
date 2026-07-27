@@ -1,0 +1,36 @@
+{
+  "_comment": "Identity, bio, navigation and coauthor links. Bio prose is adapted from Peter's own Google Sites text and his CV; titles follow CV-PeterSalib.docx (20 July 2026). coauthor_links: only add a URL after verifying the person by BOTH name and field — an unlinked name is better than a wrong link.",
+  "name": "Peter N. Salib",
+  "domain": "https://www.peternsalib.com",
+  "email": "psalib@central.uh.edu",
+  "headshot": "/headshot.jpg",
+  "meta_description": "Peter N. Salib works on law and AI risk. W. Ronald Robins Professor of Law, University of Houston; Executive Co-Director, Center for Law & AI Risk; Contributing Editor, Lawfare.",
+  "nav": [
+    { "label": "Research", "href": "/research/" },
+    { "label": "Talks", "href": "/talks/" },
+    { "label": "Public writing", "href": "/writing/" },
+    { "label": "SSRN", "href": "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2495884", "external": true },
+    { "label": "CV", "href": "/cv.pdf", "external": true }
+  ],
+  "same_as": [
+    "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2495884",
+    "https://scholar.google.com/citations?user=AVOf_jsAAAAJ",
+    "https://www.lawfaremedia.org/contributors/psalib"
+  ],
+  "bio": [
+    "I work on what law and legal institutions can do to reduce existential and other societal-scale risks from advanced AI. A running theme is law as an alignment technology: extending legal rights and duties to powerful AI systems can give them reasons to behave prosocially, and may make catastrophic outcomes less likely than technical training alone.",
+    "My scholarship appears in the <em>University of Chicago</em>, <em>Virginia</em>, <em>Michigan</em>, <em>Northwestern</em>, <em>Texas</em>, and <em>Washington University</em> law reviews. <em>AI Rights</em>, written with Simon Goldstein, is forthcoming from Cambridge University Press.",
+    "I am the W. Ronald Robins Professor of Law and Associate Professor of Law (with tenure) at the {uh}, and Founder and Executive Co-Director of the {clair}. I am also a Law and Policy Advisor to the {cais}, a Visiting Senior Fellow at the {lawai}, a Senior Visiting Scholar at {forethought}, and a Contributing Editor at {lawfare}. Before teaching I was a Climenko Fellow at Harvard Law School, practiced at Sidley Austin, and clerked for Judge Frank H. Easterbrook. You can reach me at {email}."
+  ],
+  "bio_links": {
+    "uh": ["University of Houston Law Center", "https://www.law.uh.edu/faculty/main.asp?PID=6428"],
+    "clair": ["Center for Law & AI Risk", "https://www.lawandairisk.org"],
+    "cais": ["Center for AI Safety", "https://safe.ai"],
+    "lawai": ["Institute for Law & AI", "https://law-ai.org"],
+    "forethought": ["Forethought", "https://www.forethought.org"],
+    "lawfare": ["Lawfare", "https://www.lawfaremedia.org/contributors/psalib"]
+  },
+  "coauthor_links": {
+    "Simon Goldstein": "https://simondgoldstein.com"
+  }
+}

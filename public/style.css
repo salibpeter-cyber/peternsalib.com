@@ -1,0 +1,109 @@
+/* Adapted from Simon Goldstein's site with his permission.
+
+   Light only, deliberately. The site should look the same to everyone who opens it
+   rather than inverting itself according to a visitor's system setting — otherwise
+   you never know what impression a funder actually received. */
+:root{
+  --bg:#fdfcfa;
+  --fg:#141310;
+  --muted:#6f6a5e;
+  --rule:#e6e2d9;
+  --rule-soft:#efece5;
+  --link:#2c4667;
+  --tag-bg:#efece4;
+  --accent:#8a6a3a;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  font-size:18px;
+  line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* No underlines at rest: with ~50 linked titles and every coauthor linked, the rules
+   were the loudest thing on the page. They return on hover. */
+a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--link)}
+
+/* left rail: portrait, name and nav travel with the reader */
+.shell{display:flex;gap:4rem;max-width:64rem;margin:0 auto;padding:0 2.2rem}
+.rail{flex:0 0 178px;align-self:flex-start;position:sticky;top:0;padding:3.6rem 0 2rem}
+main{flex:1 1 auto;min-width:0;max-width:40rem;padding-bottom:5rem}
+
+.portrait{display:block;width:148px;height:148px;object-fit:cover;border-radius:50%;
+  background:var(--bg);margin:0 0 1.25rem}
+.brand{font-size:1.12rem;font-weight:600;letter-spacing:-.008em;margin:0 0 1.35rem;
+  line-height:1.25}
+.brand a{border:0;color:var(--fg)}
+nav{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.775rem;
+  letter-spacing:.09em;text-transform:uppercase;font-weight:500}
+nav a{display:block;color:var(--muted);border:0;margin:0 0 .62rem;width:max-content}
+nav a:hover{color:var(--fg)}
+nav a.on{color:var(--fg);border-bottom:1px solid var(--fg)}
+
+.intro{padding-top:3.6rem;padding-bottom:1.5rem}
+.intro p{margin:0 0 1.05rem}
+.intro p:last-child{margin-bottom:0}
+h1.brand{font-size:1.12rem}
+
+@media (max-width:860px){
+  body{font-size:17px}
+  .shell{display:block;padding:0 1.5rem;max-width:44rem}
+  .rail{position:static;padding:2.4rem 0 1.1rem;display:block}
+  .portrait{width:112px;height:112px;margin-bottom:1rem}
+  .brand{margin-bottom:.9rem}
+  nav{font-size:.71rem;letter-spacing:.065em}
+  nav a{display:inline-block;margin:0 1.05rem .35rem 0}
+  nav a:last-child{margin-right:0}
+  main{max-width:none}
+  .pub.book{margin:0 -.85rem 1.7rem;padding:1rem .85rem 1.1rem}
+  .intro{padding-top:.4rem}
+}
+
+/* sections */
+main section{padding:2.1rem 0;border-top:1px solid var(--rule)}
+main section:first-child{border-top:0}
+h2,h1.section{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.75rem;
+  text-transform:uppercase;letter-spacing:.15em;color:var(--muted);
+  font-weight:600;margin:0 0 1.35rem}
+h3.group{font-size:1.45rem;font-weight:600;letter-spacing:-.016em;
+  margin:3.6rem 0 1.5rem;padding-bottom:.55rem;border-bottom:1px solid var(--rule)}
+h3.group:first-of-type{margin-top:0}
+
+/* entries */
+.pub{margin:0 0 1.8rem}
+.pub .t{font-weight:600;line-height:1.34;display:block;margin-bottom:.2rem;letter-spacing:-.004em}
+.pub .t a{color:var(--fg);border-bottom:1px solid transparent}
+.pub .t a:hover{color:var(--link);border-bottom-color:var(--link)}
+.pub.book{border:1px solid var(--rule);border-radius:3px;background:#faf8f3;
+  padding:1.15rem 1.4rem 1.3rem;margin:0 -1.4rem 2rem}
+.pub .kind{display:block;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:.655rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.55rem}
+.pub.book .t{font-size:1.14rem;line-height:1.3}
+.pub.book .syn:last-child,.pub.book .note:last-child{margin-bottom:0}
+.meta{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:.845rem;color:var(--muted);line-height:1.55;margin:0}
+.meta a{color:var(--muted);border-bottom:1px solid transparent}
+.meta a:hover{color:var(--link);border-bottom-color:var(--link)}
+.syn{margin:.38rem 0 0;font-size:.97rem;line-height:1.58;color:#37342c}
+.note{margin:.34rem 0 0;font-size:.97rem;line-height:1.58;color:#37342c;
+  font-style:italic}
+
+/* talks and media */
+.talk{display:grid;grid-template-columns:1fr auto;gap:.5rem 1.4rem;padding:.62rem 0;
+  border-bottom:1px solid var(--rule-soft);align-items:baseline}
+.talk:last-of-type{border-bottom:0}
+.talk .w{font-size:.99rem;line-height:1.45}
+.talk .w span{color:var(--muted);font-size:.9rem}
+.talk .d{font-family:system-ui,-apple-system,sans-serif;font-size:.8rem;
+  color:var(--muted);white-space:nowrap;letter-spacing:.01em}
+@media (max-width:540px){.talk{grid-template-columns:1fr;gap:.15rem}.talk .d{font-size:.78rem}}
+.more{font-family:system-ui,-apple-system,sans-serif;font-size:.85rem;
+  margin-top:1.6rem;color:var(--muted)}

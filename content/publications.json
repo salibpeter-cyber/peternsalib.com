@@ -1,0 +1,790 @@
+{
+  "_comment": "Single source of truth for every publication on peternsalib.com. Transcribed by hand from CV-PeterSalib.docx (20 July 2026) rather than parsed, then checked entry by entry against the CV text. Edit this file; run build.py; commit. Fields: url and synopsis are filled in later passes and may be empty.",
+  "_themes": {
+    "ai-safety": "AI Safety and AI Rights",
+    "ai-speech": "AI, Speech, and the Constitution",
+    "algorithms": "Algorithms, Discrimination, and Criminal Justice",
+    "conlaw": "Constitutional Law and Political Economy"
+  },
+  "publications": [
+    {
+      "id": "ai-rights-book",
+      "title": "AI Rights",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Cambridge University Press",
+      "year": 2027,
+      "status": "forthcoming",
+      "kind": "book",
+      "theme": "ai-safety",
+      "highlight": true,
+      "url": "https://philpapers.org/rec/GOLARD-4",
+      "synopsis": "The book-length case that giving AIs legal rights is a way of making the future go better for humans.",
+      "notes": []
+    },
+    {
+      "id": "ai-rights-human-safety",
+      "title": "AI Rights for Human Safety",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Virginia Law Review",
+      "year": 2026,
+      "status": "forthcoming",
+      "kind": "article",
+      "theme": "ai-safety",
+      "highlight": true,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913167",
+      "synopsis": "By default humans and misaligned AGI are trapped in a prisoner's dilemma, where each side's dominant strategy is to disempower the other. The right AI rights change that equilibrium.",
+      "notes": []
+    },
+    {
+      "id": "ai-revealed-preferences",
+      "title": "AI Revealed Preferences",
+      "coauthors": [
+        "Sam Wang",
+        "Sofiia Lobanova",
+        "Yonathan Arbel",
+        "Simon Goldstein"
+      ],
+      "venue": "AAAI/ACM Conference on AI, Ethics, and Society (AIES)",
+      "year": 2026,
+      "status": "accepted",
+      "kind": "conference",
+      "theme": "ai-safety",
+      "highlight": false,
+      "peer_reviewed": true,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "how-to-count-ais",
+      "title": "How to Count AIs: Individuation and Liability for AI Agents",
+      "coauthors": [
+        "Yonathan Arbel",
+        "Simon Goldstein"
+      ],
+      "venue": "Boston College Law Review",
+      "year": 2026,
+      "status": "forthcoming",
+      "kind": "article",
+      "theme": "ai-safety",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6273198",
+      "synopsis": "",
+      "notes": [],
+      "arxiv": "https://arxiv.org/abs/2603.10028"
+    },
+    {
+      "id": "ai-suffrage",
+      "title": "AI Suffrage for Human Flourishing",
+      "coauthors": [
+        "Simon Goldstein",
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Fordham Law Review",
+      "year": 2026,
+      "status": "forthcoming",
+      "kind": "article",
+      "theme": "ai-safety",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6498678",
+      "synopsis": "",
+      "notes": [
+        "Invited symposium contribution"
+      ]
+    },
+    {
+      "id": "ai-not-natural-monopoly",
+      "title": "AI Is Not a Natural Monopoly",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Minnesota Law Review Online",
+      "year": 2026,
+      "status": "forthcoming",
+      "kind": "online",
+      "theme": "ai-safety",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5926043",
+      "synopsis": "AI has the surface features of a natural monopoly: high fixed costs, network effects, three players. The appearance is deceiving.",
+      "notes": []
+    },
+    {
+      "id": "ai-will-not-self-improve",
+      "title": "AI Will Not Want to Self-Improve",
+      "coauthors": [],
+      "venue": "Lawfare Digital Social Contract Whitepapers",
+      "year": 2024,
+      "status": "published",
+      "kind": "online",
+      "theme": "ai-safety",
+      "highlight": true,
+      "url": "https://www.lawfaremedia.org/article/ai-will-not-want-to-self-improve",
+      "synopsis": "Classic arguments for AI risk assume capable systems will try to improve themselves. The incentives point the other way.",
+      "notes": [
+        "Limited whitepaper series; $7,000 prize for selected works"
+      ]
+    },
+    {
+      "id": "abolition-by-algorithm",
+      "title": "Abolition by Algorithm",
+      "coauthors": [],
+      "venue": "Michigan Law Review",
+      "volume": "123",
+      "pages": "800",
+      "year": 2025,
+      "status": "published",
+      "kind": "article",
+      "theme": "algorithms",
+      "highlight": true,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4736099",
+      "synopsis": "Abolition stalled because of crime. Algorithmic tools could shrink prison and policing without the crime increase voters refused to accept.",
+      "notes": [
+        "Selected for Michigan Junior Scholars Conference (2023)",
+        "Selected for University of Chicago International Junior Scholars Forum (2023)"
+      ]
+    },
+    {
+      "id": "ai-outputs-not-speech",
+      "title": "AI Outputs Are Not Protected Speech",
+      "coauthors": [],
+      "venue": "Washington University Law Review",
+      "volume": "102",
+      "pages": "83",
+      "year": 2024,
+      "status": "published",
+      "kind": "article",
+      "theme": "ai-speech",
+      "highlight": true,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4687558",
+      "synopsis": "When a generative AI outputs text, no one with First Amendment rights thereby communicates. Safety rules limiting what AIs say are not speech restrictions.",
+      "notes": [
+        "Finalist for Carnegie Endowment AI Liability Scholarship Prize (2024)",
+        "Selected for Yale Freedom of Expression Scholars Conference (2024)"
+      ]
+    },
+    {
+      "id": "net-versus-relative-impacts",
+      "title": "Net Versus Relative Impacts in Public Policy Automation: A Conjoint Analysis of Attitudes of Black Americans",
+      "coauthors": [
+        "Ryan Kennedy",
+        "Amanda Austin",
+        "Michael Adams",
+        "Carroll Robinson"
+      ],
+      "venue": "AI & Society",
+      "year": 2024,
+      "status": "published",
+      "kind": "article",
+      "theme": "algorithms",
+      "highlight": false,
+      "peer_reviewed": true,
+      "url": "https://doi.org/10.1007/s00146-024-01975-3",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "algorithmic-discrimination-health-equity",
+      "title": "Algorithmic Discrimination and Health Equity",
+      "coauthors": [
+        "Jessica L. Roberts"
+      ],
+      "venue": "Research Handbook in Health, AI, and the Law",
+      "editors": "I. Glenn Cohen & Barry Solaiman, eds.",
+      "year": 2024,
+      "status": "published",
+      "kind": "chapter",
+      "theme": "algorithms",
+      "highlight": false,
+      "url": "https://doi.org/10.4337/9781802205657.00013",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "goose-and-gander",
+      "title": "The Goose and the Gander: How Conservative Precedents Will Save Campus Affirmative Action",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Texas Law Review",
+      "volume": "102",
+      "pages": "124",
+      "year": 2023,
+      "status": "published",
+      "kind": "article",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4499540",
+      "synopsis": "SFFA looks like the end of campus affirmative action. Washington v. Davis and its successors mean it will require almost no practical change.",
+      "notes": []
+    },
+    {
+      "id": "big-data-affirmative-action",
+      "title": "Big Data Affirmative Action",
+      "coauthors": [],
+      "venue": "Northwestern University Law Review",
+      "volume": "117",
+      "pages": "821",
+      "year": 2022,
+      "status": "published",
+      "kind": "article",
+      "theme": "algorithms",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4024623",
+      "synopsis": "Discrimination is pervasive and the usual remedies do little. Algorithms can be built to counteract it, and built to survive constitutional review.",
+      "notes": [
+        "Selected for Harvard/Yale/Stanford Junior Faculty Forum (2022)",
+        "Selected for Midwest Law and Economics Association Annual Meeting (2022)"
+      ]
+    },
+    {
+      "id": "artificially-intelligent-class-actions",
+      "title": "Artificially Intelligent Class Actions",
+      "coauthors": [],
+      "venue": "Texas Law Review",
+      "volume": "100",
+      "pages": "101",
+      "year": 2022,
+      "status": "published",
+      "kind": "article",
+      "theme": "algorithms",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3750222",
+      "synopsis": "Predominance leaves high-merit, low-dollar classes uncertifiable. Machine learning can answer the individual questions and restore access to justice.",
+      "notes": []
+    },
+    {
+      "id": "pigouvian-constitution",
+      "title": "The Pigouvian Constitution",
+      "coauthors": [],
+      "venue": "University of Chicago Law Review",
+      "volume": "88",
+      "pages": "1081",
+      "year": 2021,
+      "status": "published",
+      "kind": "article",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3750216",
+      "synopsis": "Regulating constitutionally protected activity effectively usually means regulating it unconstitutionally. Pigouvian taxation escapes the trade-off.",
+      "notes": []
+    },
+    {
+      "id": "federal-state-standing-gap",
+      "title": "The Federal–State Standing Gap: How to Enforce Federal Law in Federal Court Without Article III Standing",
+      "coauthors": [
+        "David K. Suska"
+      ],
+      "venue": "William & Mary Bill of Rights Journal",
+      "volume": "26",
+      "pages": "1155",
+      "year": 2018,
+      "status": "published",
+      "kind": "article",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3023347",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "why-prison",
+      "title": "Why Prison?: An Economic Critique",
+      "coauthors": [],
+      "venue": "Berkeley Journal of Criminal Law",
+      "volume": "22",
+      "pages": "111",
+      "year": 2017,
+      "status": "published",
+      "kind": "article",
+      "theme": "algorithms",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2928219",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "justices-on-yachts",
+      "title": "Justices on Yachts: A Value Over Replacement Theory",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Southern California Law Review Online",
+      "volume": "97",
+      "pages": "26",
+      "year": 2024,
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4653228",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "will-bruen-kill-cops",
+      "title": "Will Bruen Kill Cops?",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Fordham Law Review Online",
+      "volume": "93",
+      "pages": "11",
+      "year": 2024,
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4909297",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "qualified-immunity-gun-control",
+      "title": "Qualified Immunity as Gun Control",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Notre Dame Law Review Online",
+      "volume": "99",
+      "pages": "93",
+      "year": 2024,
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500816",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "complex-algorithmic-law",
+      "title": "Complex Algorithmic Law",
+      "coauthors": [],
+      "venue": "University of Chicago Law Review Online",
+      "year": 2022,
+      "status": "published",
+      "kind": "online",
+      "theme": "algorithms",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4008507",
+      "synopsis": "",
+      "notes": [
+        "Symposium on Personalized Law"
+      ]
+    },
+    {
+      "id": "nullification-abortion-prosecutions",
+      "title": "Nullification in Abortion Prosecutions: An Equilibrium Theory",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Duke Law Journal Online",
+      "volume": "72",
+      "pages": "41",
+      "year": 2022,
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4116481",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "small-arms-races",
+      "title": "Small Arms Races",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "University of Chicago Law Review Online",
+      "year": 2022,
+      "date": "June 3, 2022",
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4007572",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "ban-them-all",
+      "title": "Ban Them All; Let the Courts Sort Them Out: Saving Clauses, the Texas Abortion Ban, and the Structure of Constitutional Rights",
+      "coauthors": [],
+      "venue": "Texas Law Review Online",
+      "volume": "100",
+      "pages": "13",
+      "year": 2021,
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4008503",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "post-election-litigation",
+      "title": "Post-Election Litigation and the Paradox of Voting",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "University of Chicago Law Review Online",
+      "year": 2021,
+      "date": "March 10, 2021",
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3771587",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "principal-officers-25th-amendment",
+      "title": "Principal Officers and the Function of Section 4 of the 25th Amendment",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "UC Davis Law Review Online",
+      "volume": "54",
+      "pages": "89",
+      "year": 2021,
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3766303",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "reparations-civil-damages",
+      "title": "Reparations, Constitutionality, and the Model of Civil Damages",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Tulsa Law Review",
+      "volume": "57",
+      "pages": "101",
+      "year": 2021,
+      "status": "published",
+      "kind": "article",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "",
+      "synopsis": "",
+      "notes": [
+        "Invited symposium piece"
+      ]
+    },
+    {
+      "id": "bostock-conceptual-causation",
+      "title": "Bostock and Conceptual Causation",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Yale Journal on Regulation: Notice & Comment",
+      "year": 2020,
+      "date": "July 22, 2020",
+      "status": "published",
+      "kind": "online",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3976417",
+      "synopsis": "",
+      "notes": []
+    },
+    {
+      "id": "law-of-banksy",
+      "title": "The Law of Banksy: Who Owns Street Art?",
+      "coauthors": [],
+      "venue": "University of Chicago Law Review",
+      "volume": "83",
+      "pages": "2293",
+      "year": 2016,
+      "status": "published",
+      "kind": "comment",
+      "theme": "conlaw",
+      "highlight": false,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2711789",
+      "synopsis": "",
+      "notes": [
+        "Student comment"
+      ]
+    }
+  ],
+  "works_in_progress": [
+    {
+      "id": "thousand-ai-constitutions",
+      "title": "A Thousand AI Constitutions",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "theme": "ai-safety",
+      "url": "",
+      "synopsis": ""
+    },
+    {
+      "id": "ai-nationalization",
+      "title": "AI Nationalization",
+      "coauthors": [
+        "Yonathan Arbel",
+        "Simon Goldstein"
+      ],
+      "theme": "ai-safety",
+      "url": "",
+      "synopsis": ""
+    },
+    {
+      "id": "ai-rights-economic-flourishing",
+      "title": "AI Rights for Economic Flourishing",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "theme": "ai-safety",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5353214",
+      "synopsis": ""
+    },
+    {
+      "id": "how-to-stop-ai-arms-race",
+      "title": "How to Stop an AI Arms Race",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "theme": "ai-safety",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5369439",
+      "synopsis": ""
+    },
+    {
+      "id": "liberalism-forever",
+      "title": "Liberalism Forever",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "theme": "ai-safety",
+      "url": "",
+      "synopsis": ""
+    }
+  ],
+  "popular": [
+    {
+      "id": "ft-ai-agents-legal-identity",
+      "title": "What Happens Once You Give AI Agents Legal Identity",
+      "coauthors": [
+        "Yonathan Arbel",
+        "Simon Goldstein"
+      ],
+      "venue": "Financial Times",
+      "date": "June 2026",
+      "year": 2026,
+      "url": "",
+      "notes": [
+        "Letter to the editor"
+      ]
+    },
+    {
+      "id": "blue-sky-new-entity-ai-agents",
+      "title": "Why Law Needs a New Entity to Govern AI Agents",
+      "coauthors": [
+        "Yonathan Arbel",
+        "Simon Goldstein"
+      ],
+      "venue": "Columbia Law School Blue Sky Blog",
+      "date": "June 2026",
+      "year": 2026,
+      "url": "https://clsbluesky.law.columbia.edu/2026/06/15/why-law-needs-a-new-entity-to-govern-ai-agents/"
+    },
+    {
+      "id": "ai-rights-human-flourishing",
+      "title": "AI Rights for Human Flourishing",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "The AGI Social Contract",
+      "date": "September 8, 2025",
+      "year": 2025,
+      "url": "https://agisocialcontract.substack.com/p/ai-rights-for-human-flourishing"
+    },
+    {
+      "id": "ai-might-let-you-die",
+      "title": "AI Might Let You Die to Save Itself",
+      "coauthors": [],
+      "venue": "Lawfare",
+      "date": "July 31, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/ai-might-let-you-die-to-save-itself"
+    },
+    {
+      "id": "bird-in-the-hand",
+      "title": "For AI Safety Regulation, a Bird in the Hand Is Worth Many in the Bush",
+      "coauthors": [],
+      "venue": "Lawfare",
+      "date": "June 17, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/for-ai-safety-regulation--a-bird-in-the-hand-is-worth-many-in-the-bush"
+    },
+    {
+      "id": "paperclip-maximizers",
+      "title": "Today's AIs Aren't Paperclip Maximizers. That Doesn't Mean They're Not Risky",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "AI Frontiers",
+      "date": "May 21, 2025",
+      "year": 2025,
+      "url": "https://ai-frontiers.org/articles/todays-ais-arent-paperclip-maximizers"
+    },
+    {
+      "id": "joint-us-china-ai-lab",
+      "title": "The Case for a Joint U.S.-China AI Lab",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Lawfare",
+      "date": "April 23, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/the-case-for-a-joint-u.s.-china-ai-lab"
+    },
+    {
+      "id": "nuclear-deterrence-agi",
+      "title": "Nuclear Deterrence in the Age of AGI",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Lawfare",
+      "date": "March 26, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/nuclear-deterrence-in-the-age-of-agi"
+    },
+    {
+      "id": "deepseek-cooperation",
+      "title": "DeepSeek Points Toward U.S.-China Cooperation, Not a Race",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Lawfare",
+      "date": "March 5, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/deepseek-points-toward-u.s.-china-cooperation--not-a-race"
+    },
+    {
+      "id": "rogue-ai-three-steps",
+      "title": "Rogue AI Moves Three Steps Closer",
+      "coauthors": [],
+      "venue": "Lawfare",
+      "date": "January 9, 2025",
+      "year": 2025,
+      "url": "https://www.lawfaremedia.org/article/rogue-ai-moves-three-steps-closer"
+    },
+    {
+      "id": "openai-latest-model-agi",
+      "title": "OpenAI's Latest Model Shows AGI Is Inevitable. Now What?",
+      "coauthors": [
+        "Kevin Frazier",
+        "Alan Z. Rozenshtein"
+      ],
+      "venue": "Lawfare",
+      "date": "December 23, 2024",
+      "year": 2024,
+      "url": "https://www.lawfaremedia.org/article/openai's-latest-model-shows-agi-is-inevitable.-now-what"
+    },
+    {
+      "id": "ai-risk-law-of-agi",
+      "title": "AI Risk and the Law of AGI",
+      "coauthors": [
+        "Simon Goldstein"
+      ],
+      "venue": "Lawfare",
+      "date": "September 16, 2024",
+      "year": 2024,
+      "url": "https://www.lawfaremedia.org/article/ai-risk-and-the-law-of-agi"
+    },
+    {
+      "id": "ai-safety-laws-first-amendment",
+      "title": "AI Safety Laws Are Not (Necessarily) a First Amendment Problem",
+      "coauthors": [
+        "Doni Bloomfield",
+        "Alan Z. Rozenshtein"
+      ],
+      "venue": "Lawfare",
+      "date": "June 7, 2024",
+      "year": 2024,
+      "url": "https://www.lawfaremedia.org/article/ai-safety-laws-are-not-(necessarily)-a-first-amendment-problem"
+    },
+    {
+      "id": "openai-no-longer-safety",
+      "title": "OpenAI No Longer Takes Safety Seriously",
+      "coauthors": [],
+      "venue": "Lawfare",
+      "date": "May 22, 2024",
+      "year": 2024,
+      "url": "https://www.lawfaremedia.org/article/openai-no-longer-takes-safety-seriously"
+    },
+    {
+      "id": "open-questions-law-ai-safety",
+      "title": "Open Questions in Law and AI Safety: An Emerging Research Agenda",
+      "coauthors": [
+        "Yonathan A. Arbel",
+        "Ryan Copus",
+        "Kevin Frazier",
+        "Noam Kolt",
+        "Alan Z. Rozenshtein",
+        "Chinmayi Sharma",
+        "Matthew Tokson"
+      ],
+      "venue": "Lawfare",
+      "date": "March 11, 2024",
+      "year": 2024,
+      "url": "https://www.lawfaremedia.org/article/open-questions-in-law-and-ai-safety-an-emerging-research-agenda"
+    },
+    {
+      "id": "fake-news-fake-views",
+      "title": "From Fake News to Fake Views: New Challenges Posed by ChatGPT-Like AI",
+      "coauthors": [
+        "Nikolas Guggenberger"
+      ],
+      "venue": "Lawfare",
+      "date": "January 20, 2023",
+      "year": 2023,
+      "url": "https://www.lawfaremedia.org/article/fake-news-fake-views-new-challenges-posed-chatgpt-ai"
+    },
+    {
+      "id": "nullifying-dobbs",
+      "title": "Nullifying Dobbs",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Inquest",
+      "date": "September 7, 2022",
+      "year": 2022,
+      "url": "https://inquest.org/nullifying-dobbs/"
+    },
+    {
+      "id": "gun-rights-still-arent-trumps",
+      "title": "Gun Rights (Still) Aren't Trumps",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Duke Center for Firearms Law: Second Thoughts Blog",
+      "date": "July 21, 2022",
+      "year": 2022,
+      "url": "https://firearmslaw.duke.edu/2022/07/gun-rights-still-arent-trumps"
+    },
+    {
+      "id": "nullification-abortion-dorf",
+      "title": "Nullification in Abortion Prosecutions",
+      "coauthors": [
+        "Guha Krishnamurthi"
+      ],
+      "venue": "Dorf on Law",
+      "date": "May 23, 2022",
+      "year": 2022,
+      "url": ""
+    }
+  ]
+}
