@@ -77,5 +77,8 @@
     "Guha Krishnamurthi": "https://www.law.umaryland.edu/faculty--research/directory/profile/index.php?id=1384"
   },
   "show_synopses": false,
-  "portrait_size": 172
+  "portrait_size": 172,
+  "legacy_redirects": {
+    "/home": "/"
+  }
 }
