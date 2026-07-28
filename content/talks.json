@@ -2,8 +2,8 @@
   "_comment": "Selected presentations and media, transcribed from CV-PeterSalib.docx (20 July 2026). 'work' is the paper or topic; 'venue' the host; 'date' as written on the CV.",
   "talks": [
     {
-      "work": "AI Research and Constitutions",
-      "venue": "Roundtable, Anthropic, San Francisco",
+      "work": "Roundtable on Claude's Constitution",
+      "venue": "Anthropic, San Francisco",
       "date": "July 2026",
       "sort": "2026-07"
     },
