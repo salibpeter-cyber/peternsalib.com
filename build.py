@@ -77,7 +77,9 @@ def citation(p):
         bits.append(str(vol))
 
     status, year = p.get("status"), p.get("year")
-    if status == "forthcoming":
+    if p.get("in_progress"):
+        bits.append("(work in progress)")
+    elif status == "forthcoming":
         bits.append(f"(forthcoming {year})" if year else "(forthcoming)")
     elif status == "accepted":
         bits.append(f"(accepted, {year})" if year else "(accepted)")
@@ -225,21 +227,24 @@ def build_research(site, pubs):
     themes = pubs["_themes"]
     body = ['<section>\n<h1 class="section">Research</h1>']
 
-    wip = pubs["works_in_progress"]
-    if wip:
-        body.append('<h3 class="group">Works in progress</h3>')
-        for p in sorted(wip, key=lambda x: x["title"]):
-            body.append(entry_html(p, links, None, show))
-
     def sort_key(p):
         # forthcoming first, then most recent
         return (0 if p.get("status") in ("forthcoming", "accepted") else 1, -(p.get("year") or 0))
 
+    # Works in progress are not a section of their own; each one leads the theme
+    # it belongs to, marked with a parenthetical so a draft never reads as
+    # published work. The flag is set here rather than in the JSON so the
+    # homepage's own "Work in progress" label is left alone.
+    wip = [dict(p, in_progress=True) for p in pubs["works_in_progress"]]
+
     for key, label in themes.items():
         group = [p for p in pubs["publications"] if p.get("theme") == key]
-        if not group:
+        drafts = sorted((p for p in wip if p.get("theme") == key), key=lambda x: x["title"])
+        if not group and not drafts:
             continue
         body.append(f'<h3 class="group">{escape(label)}</h3>')
+        for p in drafts:
+            body.append(entry_html(p, links, None, show))
         for p in sorted(group, key=sort_key):
             body.append(entry_html(p, links, "Book" if p.get("kind") == "book" else None, show))
 
