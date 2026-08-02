@@ -1,8 +1,8 @@
 {
   "_comment": "Single source of truth for every publication on peternsalib.com. Transcribed by hand from CV-PeterSalib.docx (20 July 2026) rather than parsed, then checked entry by entry against the CV text. Edit this file; run build.py; commit. Fields: url and synopsis are filled in later passes and may be empty.",
   "_themes": {
-    "ai-rights": "AI Rights and Human Safety",
-    "ai-regulation": "Regulating Frontier AI",
+    "ai-rights": "The Instrumental Case for AI Rights",
+    "ai-regulation": "Governing Frontier AI",
     "ai-behavior": "How AI Systems Behave",
     "algorithms": "Algorithms in the Legal System",
     "conlaw": "Constitutional Law"
