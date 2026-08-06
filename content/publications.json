@@ -72,7 +72,7 @@
       "status": "forthcoming",
       "kind": "article",
       "theme": "ai-regulation",
-      "highlight": false,
+      "highlight": true,
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6273198",
       "synopsis": "AI agents copy, split, merge, swarm and vanish. Before law can hold one liable, it needs a way to say which one acted.",
       "notes": [],

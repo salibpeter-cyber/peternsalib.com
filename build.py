@@ -116,7 +116,7 @@ def entry_html(p, links, kind_label=None, show_syn=True, show_notes=True):
         body.append(f'<p class="syn">{p["synopsis"]}</p>')
 
     # The homepage is a highlight reel; prizes and workshop selections belong on
-    # the full research list rather than under the five featured pieces.
+    # the full research list rather than under the featured pieces.
     if show_notes:
         for n in p.get("notes", []):
             body.append(f'<p class="note">{escape(n)}</p>')
