@@ -97,9 +97,9 @@ Do not "fix" these without asking.
 - **Coauthors are linked only when verified by name *and* field.** Currently Goldstein,
   Arbel and Krishnamurthi. An unlinked name beats a link to the wrong person. Peter's old
   site is where the verified URLs came from.
-- **Two entries are deliberately unlinked**, with reasons recorded in `no_link_reason`:
-  AI Nationalization (draft not public yet) and the Dorf on Law post. `build.py --check`
-  reports these as decisions, not errors.
+- **One entry is deliberately unlinked**, with the reason recorded in `no_link_reason`:
+  the Dorf on Law post. `build.py --check` reports it as a decision, not an error.
+  (AI Nationalization was also unlinked until its draft went up on SSRN on 12 August 2026.)
 - **One colour scheme, light only.** If the site adapted to the visitor's device you would
   never know what impression a funder actually got.
 - **Status is a parenthetical, never a badge.** Badges shout.
