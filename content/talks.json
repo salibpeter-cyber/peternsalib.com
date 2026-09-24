@@ -1,6 +1,36 @@
 {
-  "_comment": "Selected presentations and media, transcribed from CV-PeterSalib.docx (20 July 2026). 'work' is the paper or topic; 'venue' the host; 'date' as written on the CV.",
+  "_comment": "Selected presentations and media, transcribed from CV-PeterSalib.docx (20 July 2026; talks refreshed 24 September 2026). 'work' is the paper or topic; 'venue' the host; 'date' as written on the CV.",
   "talks": [
+    {
+      "work": "Law for AI Agents",
+      "venue": "Rice University",
+      "date": "November 2026",
+      "sort": "2026-11"
+    },
+    {
+      "work": "AI & Law Colloquium",
+      "venue": "Columbia Law School",
+      "date": "November 2026",
+      "sort": "2026-11"
+    },
+    {
+      "work": "AI Nationalization",
+      "venue": "Law & Technology Workshop, Minneapolis",
+      "date": "October 2026",
+      "sort": "2026-10"
+    },
+    {
+      "work": "A-Corps Roundtable",
+      "venue": "University of Miami Law",
+      "date": "October 2026",
+      "sort": "2026-10"
+    },
+    {
+      "work": "AI Is Not a Natural Monopoly",
+      "venue": "Australian Competition and Consumer Commission",
+      "date": "September 2026",
+      "sort": "2026-09"
+    },
     {
       "work": "Roundtable on Claude's Constitution",
       "venue": "Anthropic, San Francisco",

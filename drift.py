@@ -43,6 +43,25 @@ PUB_SECTIONS = {
 }
 STOP_AT = {"education", "clerkship", "appointments", "selected presentations"}
 
+# The talks section is parsed separately: its entries are
+# '<italic title>, <venue>, <month year>.' in a single paragraph, which is a
+# different shape from the publication entries above.
+TALK_SECTION = "selected presentations"
+TALK_STOP_AT = {"selected media appearances", "other professional experience",
+                "professional organizations"}
+
+# Talks in one place but deliberately not the other, same idea as EXPECTED_OFF_SITE.
+EXPECTED_TALKS_OFF_SITE = {
+    "Big Data Affirmative Action — Harvard Law School, Guest Lecturer for Prof. "
+    "Jonathan Zittrain\u2019s Ethics and Governance of Artificial Intelligence course":
+        "same talk; the site shortens the course name and abbreviates Artificial Intelligence",
+}
+EXPECTED_TALKS_OFF_CV = {
+    "Big Data Affirmative Action — Harvard Law School, guest lecture for "
+    "Jonathan Zittrain's Ethics and Governance of AI":
+        "same talk; the CV carries the full course title",
+}
+
 # Titles that appear in one place but deliberately not the other. Keeping these
 # explicit is what stops a real decision from looking like an error.
 EXPECTED_OFF_SITE = {
@@ -117,6 +136,70 @@ def cv_titles(path):
     return out
 
 
+def cv_talks(path):
+    """Yield (title, venue) for every entry under SELECTED PRESENTATIONS.
+
+    Each entry is one paragraph whose first run is the italicised title and
+    whose remainder is ", <venue>, <month year>." Splitting on the run boundary
+    rather than on commas matters: venues contain commas of their own
+    ("Schwartz Reisman Institute Seminar Series, University of Toronto").
+    """
+    d = docx.Document(path)
+    in_section, out = False, []
+
+    for p in d.paragraphs:
+        text = p.text.strip()
+        if not text:
+            continue
+        low = norm(text)
+        if low == TALK_SECTION:
+            in_section = True
+            continue
+        if not in_section:
+            continue
+        if low in TALK_STOP_AT:
+            break
+
+        # The title is every *leading italic* run, not just the first: Word
+        # splits a run wherever it feels like it, so "AI Rights for Human
+        # Safety" can arrive as two runs and taking only the first silently
+        # truncates the title.
+        runs = p._p.findall(qn("w:r"))
+        if not runs:
+            continue
+
+        def italic(r):
+            rpr = r.find(qn("w:rPr"))
+            return rpr is not None and rpr.find(qn("w:i")) is not None
+
+        head, tail = [], []
+        for r in runs:
+            if not tail and italic(r):
+                head.append(r)
+            else:
+                tail.append(r)
+        if not head:  # no italic title: not an entry
+            continue
+        title = "".join("".join(t.text or "" for t in r.iter(qn("w:t")))
+                        for r in head).strip()
+        rest = "".join("".join(t.text or "" for t in r.iter(qn("w:t")))
+                       for r in tail).strip()
+
+        # rest looks like ", Venue, Month Year." — drop the leading comma and
+        # the trailing date, which is everything after the final comma.
+        rest = rest.lstrip(",").rstrip(". ").strip()
+        venue = rest.rsplit(",", 1)[0].strip() if "," in rest else rest
+        if len(title) > 3 and venue:
+            out.append((title, venue))
+    return out
+
+
+def site_talks():
+    with open(os.path.join(ROOT, "content", "talks.json"), encoding="utf-8") as f:
+        d = json.load(f)
+    return [(t["work"], t["venue"]) for t in d["talks"]]
+
+
 def site_titles():
     with open(os.path.join(ROOT, "content", "publications.json"), encoding="utf-8") as f:
         d = json.load(f)
@@ -155,7 +238,66 @@ def main():
         for t, why in EXPECTED_OFF_SITE.items():
             print(f"  · {t} — {why}")
 
-    if not only_cv and not only_site:
+    # Talks, same comparison on (title, venue) pairs.
+    cv_t = cv_talks(cv_path)
+    site_t = site_talks()
+    # Pair the two lists up rather than differencing sets of keys. A talk
+    # matches when the titles agree and one venue string is a word-prefix of the
+    # other: the site deliberately shortens some venues the CV spells out
+    # ("Symposium on Personalized Law" against "...by Omri Ben Shahar and Ariel
+    # Porat") and sometimes adds a city the CV omits ("Anthropic, San
+    # Francisco"). Those are editorial choices, not drift. Requiring the title
+    # to match exactly is what stops the same paper at two different Oxford
+    # venues from collapsing into one.
+    def words(s):
+        return norm(s).split()
+
+    def venue_compatible(a, b):
+        wa, wb = words(a), words(b)
+        n = min(len(wa), len(wb))
+        return n > 0 and wa[:n] == wb[:n]
+
+    unmatched_site = list(site_t)
+    only_cv_t, matched_t = [], 0
+    for ct, cv_ven in cv_t:
+        for i, (st, site_ven) in enumerate(unmatched_site):
+            if norm(ct) == norm(st) and venue_compatible(cv_ven, site_ven):
+                unmatched_site.pop(i)
+                matched_t += 1
+                break
+        else:
+            label = f"{ct} — {cv_ven}"
+            if label not in EXPECTED_TALKS_OFF_SITE:
+                only_cv_t.append(label)
+
+    only_site_t = [f"{a} — {b}" for a, b in unmatched_site
+                   if f"{a} — {b}" not in EXPECTED_TALKS_OFF_CV]
+
+    print(f"\nTalks — CV: {len(cv_t)}   Site: {len(site_t)}   "
+          f"matched: {matched_t}")
+
+    if only_cv_t:
+        print(f"\nTalks in the CV but not on the site ({len(only_cv_t)}):")
+        for t in sorted(only_cv_t):
+            print(f"  + {t}")
+    if only_site_t:
+        print(f"\nTalks on the site but not in the CV ({len(only_site_t)}):")
+        for t in sorted(only_site_t):
+            print(f"  - {t}")
+
+    # A placeholder is not drift, but it must not reach the live site unnoticed.
+    todo = [f"{a} — {b}" for a, b in site_t if norm(a) in ("title tbd", "tbd")]
+    if todo:
+        print(f"\nTalks still needing a title ({len(todo)}):")
+        for t in todo:
+            print(f"  ? {t}")
+
+    if EXPECTED_TALKS_OFF_SITE or EXPECTED_TALKS_OFF_CV:
+        print("\nTalks recorded as deliberate variants:")
+        for t, why in {**EXPECTED_TALKS_OFF_SITE, **EXPECTED_TALKS_OFF_CV}.items():
+            print(f"  \u00b7 {t} \u2014 {why}")
+
+    if not any((only_cv, only_site, only_cv_t, only_site_t, todo)):
         print("\nNo drift.")
         return 0
     return 1
