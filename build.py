@@ -267,25 +267,34 @@ def build_writing(site, pubs):
     return "\n".join(body)
 
 
+def appearances(entries):
+    """Rows for talks, podcasts and media — same shape; byline and url optional."""
+    rows = []
+    for e in sorted(entries, key=lambda x: x["sort"], reverse=True):
+        w = link(escape(e["work"]), e.get("url", ""))
+        who = f'{escape(e["byline"])}, ' if e.get("byline") else ""
+        rows.append(
+            f'<div class="talk"><div class="w">{w} '
+            f'<span>{who}{escape(e["venue"])}</span></div>'
+            f'<div class="d">{escape(e["date"])}</div></div>'
+        )
+    return rows
+
+
 def build_talks(site, data):
     body = ['<section>\n<h1 class="section">Talks</h1>']
-    for t in sorted(data["talks"], key=lambda x: x["sort"], reverse=True):
-        body.append(
-            f'<div class="talk"><div class="w">{escape(t["work"])} '
-            f'<span>{escape(t["venue"])}</span></div>'
-            f'<div class="d">{escape(t["date"])}</div></div>'
-        )
+    body += appearances(data["talks"])
     body.append("</section>")
 
     body.append('<section>\n<h2 class="section">Selected media</h2>')
-    for m in sorted(data["media"], key=lambda x: x["sort"], reverse=True):
-        w = link(escape(m["work"]), m.get("url", ""))
-        who = f'{escape(m["byline"])}, ' if m.get("byline") else ""
-        body.append(
-            f'<div class="talk"><div class="w">{w} '
-            f'<span>{who}{escape(m["venue"])}</span></div>'
-            f'<div class="d">{escape(m["date"])}</div></div>'
-        )
+    body += appearances(data["media"])
+    body.append("</section>")
+    return "\n".join(body)
+
+
+def build_podcasts(site, data):
+    body = ['<section>\n<h1 class="section">Podcasts</h1>']
+    body += appearances(data["podcasts"])
     body.append("</section>")
     return "\n".join(body)
 
@@ -332,6 +341,8 @@ def main():
           build_writing(site, pubs), "/writing/", nav_on="Public writing"))
     write("talks/index.html", page(site, f"Talks — {site['name']}",
           build_talks(site, talks), "/talks/", nav_on="Talks"))
+    write("podcasts/index.html", page(site, f"Podcasts — {site['name']}",
+          build_podcasts(site, talks), "/podcasts/", nav_on="Podcasts"))
 
     # Cloudflare Pages serves the homepage with a 200 for unmatched paths, so
     # every typo becomes a soft 404 that search engines index as duplicate
@@ -359,7 +370,7 @@ def main():
 
     n = sum(len(pubs[g]) for g in ("publications", "works_in_progress", "popular"))
     linked = len(re.findall(r'href="http', open(os.path.join(PUBLIC, "research/index.html")).read()))
-    print(f"built {n} entries across 5 pages; {linked} outbound links on /research/")
+    print(f"built {n} entries across 6 pages; {linked} outbound links on /research/")
     return 0
 
 

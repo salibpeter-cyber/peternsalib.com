@@ -1,5 +1,5 @@
 {
-  "_comment": "Selected presentations and media, transcribed from CV-PeterSalib.docx (20 July 2026; talks refreshed 24 September 2026). 'work' is the paper or topic; 'venue' the host; 'date' as written on the CV.",
+  "_comment": "Selected presentations, podcasts and media, transcribed from CV-PeterSalib.docx (20 July 2026; talks refreshed 24 September 2026; podcasts split out of media and two CV-absent episodes added 6 October 2026). 'work' is the paper, episode or topic; 'venue' the host or show; 'byline' the interviewer; 'date' as written on the CV.",
   "talks": [
     {
       "work": "Law for AI Agents",
@@ -194,14 +194,22 @@
       "sort": "2019-10"
     }
   ],
-  "media": [
+  "podcasts": [
+    {
+      "work": "Peter Salib on the Legal and Policy Ramifications of the OpenAI-Hugging Face Postmortems",
+      "byline": "Kevin Frazier",
+      "venue": "Lawfare Daily",
+      "date": "September 2026",
+      "sort": "2026-09",
+      "url": "https://www.lawfaremedia.org/article/lawfare-daily--peter-salib-on-the-legal-and-policy-ramifications-of-the-openai-hugging-face-postmortems"
+    },
     {
       "work": "AI Rights for Human Safety",
-      "byline": "Fin Moorehouse",
+      "byline": "Fin Moorhouse",
       "venue": "ForeCast",
       "date": "July 2025",
       "sort": "2025-07",
-      "url": ""
+      "url": "https://newsletter.forethought.org/p/ai-rights-for-human-safety-with-peter"
     },
     {
       "work": "Peter Salib on AI Rights for Human Safety",
@@ -209,8 +217,34 @@
       "venue": "AXRP Podcast, episode 44",
       "date": "June 2025",
       "sort": "2025-06",
-      "url": ""
+      "url": "https://axrp.net/episode/2025/06/28/episode-44-peter-salib-ai-rights-human-safety.html"
     },
+    {
+      "work": "Peter Salib on AI Self-Improvement",
+      "byline": "Alan Rozenshtein",
+      "venue": "Lawfare Podcast",
+      "date": "May 2024",
+      "sort": "2024-05",
+      "url": "https://www.lawfaremedia.org/article/lawfare-daily-peter-salib-on-ai-self-improvement"
+    },
+    {
+      "work": "The First Amendment Implications of Artificial Intelligence",
+      "byline": "Jake Guarino & Harrison Little",
+      "venue": "Emphasis Added, Houston Law Review",
+      "date": "March 2024",
+      "sort": "2024-03",
+      "url": "https://emphasisadded.buzzsprout.com/644674/episodes/14671264-the-first-amendment-implications-of-artificial-intelligence"
+    },
+    {
+      "work": "Corrosive Energy Drinks and Peruvian Cat Stew",
+      "byline": "Stephen Dubner",
+      "venue": "Tell Me Something I Don't Know",
+      "date": "November 2017",
+      "sort": "2017-11",
+      "url": ""
+    }
+  ],
+  "media": [
     {
       "work": "Hello Houston",
       "byline": "",
@@ -258,14 +292,6 @@
       "date": "August 2024",
       "sort": "2024-08",
       "url": ""
-    },
-    {
-      "work": "Peter Salib on AI Self-Improvement",
-      "byline": "Alan Rozenshtein",
-      "venue": "Lawfare Podcast",
-      "date": "May 2024",
-      "sort": "2024-05",
-      "url": "https://www.lawfaremedia.org/article/lawfare-daily-peter-salib-on-ai-self-improvement"
     },
     {
       "work": "Are AI outputs protected speech? No, and it's a dangerous proposition, legal expert says",
@@ -329,14 +355,6 @@
       "venue": "JOTWELL",
       "date": "March 2021",
       "sort": "2021-03",
-      "url": ""
-    },
-    {
-      "work": "Corrosive Energy Drinks and Peruvian Cat Stew",
-      "byline": "Stephen Dubner",
-      "venue": "Tell Me Something I Don't Know",
-      "date": "November 2017",
-      "sort": "2017-11",
       "url": ""
     },
     {
