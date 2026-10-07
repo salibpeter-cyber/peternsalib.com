@@ -1,5 +1,5 @@
 {
-  "_comment": "Selected presentations, podcasts and media, transcribed from CV-PeterSalib.docx (20 July 2026; talks refreshed 24 September 2026; podcasts split out of media and two CV-absent episodes added 6 October 2026). 'work' is the paper, episode or topic; 'venue' the host or show; 'byline' the interviewer; 'date' as written on the CV.",
+  "_comment": "Selected presentations, podcasts and media, transcribed from CV-PeterSalib.docx (20 July 2026; talks refreshed 24 September 2026; podcasts split out of media and three CV-absent episodes added 6–7 October 2026). 'work' is the paper, episode or topic; 'venue' the host or show; 'byline' the interviewer; 'date' as written on the CV.",
   "talks": [
     {
       "work": "Law for AI Agents",
@@ -202,6 +202,14 @@
       "date": "September 2026",
       "sort": "2026-09",
       "url": "https://www.lawfaremedia.org/article/lawfare-daily--peter-salib-on-the-legal-and-policy-ramifications-of-the-openai-hugging-face-postmortems"
+    },
+    {
+      "work": "Liberalism Forever (with Simon Goldstein)",
+      "byline": "Fin Moorhouse",
+      "venue": "ForeCast",
+      "date": "July 2026",
+      "sort": "2026-07",
+      "url": "https://newsletter.forethought.org/p/liberalism-forever"
     },
     {
       "work": "AI Rights for Human Safety",
