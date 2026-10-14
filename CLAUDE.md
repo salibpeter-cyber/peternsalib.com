@@ -130,9 +130,29 @@ answer, the served bytes — rather than waiting and assuming.
 **The edge cache lies right after a deploy.** Append a cache-busting query string before
 believing any result.
 
-**Peter's Word is the sandboxed App Store build** and its AppleScript dictionary has no
-`save as` or `save`. You cannot convert the CV to PDF programmatically. There is no
-LibreOffice and no LaTeX on the machine. Ask him to export it, or install something first.
+**Peter's Word is the sandboxed App Store build.** `save as` *does* work from AppleScript
+(this note used to say otherwise), but saving a new file into Dropbox makes Word raise a
+"Grant File Access" prompt and the script hangs until it times out. Save into Word's own
+container instead, which needs no prompt, then copy the PDF out (verified 14 Oct 2026):
+
+```applescript
+with timeout of 90 seconds
+tell application "Microsoft Word"
+	open file name "/Users/petersalib/Dropbox/CV-PeterSalib.docx"
+	delay 3
+	set d to document "CV-PeterSalib.docx"
+	save as d file name "/Users/petersalib/Library/Containers/com.microsoft.Word/Data/Documents/CV-PeterSalib.pdf" file format format PDF
+	close d saving no
+end tell
+end timeout
+```
+
+Address the document by name, never `active document` — Peter often has other files open in
+Word. There is no LibreOffice, pandoc or LaTeX on the machine.
+
+**The CV is at `~/Dropbox/CV-PeterSalib.docx`.** The `~/Library/CloudStorage/Dropbox` paths
+in this file are stale on Peter's current Mac; `drift.py` without an argument reports
+"No CV". Pass the path: `python3 drift.py ~/Dropbox/CV-PeterSalib.docx`.
 
 **`escape(url, quote=True)` turns apostrophes into `&#x27;`.** Browsers decode this
 correctly; naive link checkers do not. One Lawfare URL will always look broken and isn't.
