@@ -132,13 +132,20 @@ believing any result.
 
 **Peter's Word is the sandboxed App Store build.** `save as` *does* work from AppleScript
 (this note used to say otherwise), but saving a new file into Dropbox makes Word raise a
-"Grant File Access" prompt and the script hangs until it times out. Save into Word's own
-container instead, which needs no prompt, then copy the PDF out (verified 14 Oct 2026):
+"Grant File Access" prompt and the script hangs until it times out.
+
+*Opening* a Dropbox file can raise the same prompt. That happened on 24 Oct 2026, and the
+prompt sat on Peter's screen. So first copy the .docx into Word's own container, then open
+and save it there, which needs no prompt. Copy the PDF out afterward:
+
+```bash
+cp ~/Dropbox/CV-PeterSalib.docx ~/Library/Containers/com.microsoft.Word/Data/Documents/
+```
 
 ```applescript
 with timeout of 90 seconds
 tell application "Microsoft Word"
-	open file name "/Users/petersalib/Dropbox/CV-PeterSalib.docx"
+	open file name "/Users/petersalib/Library/Containers/com.microsoft.Word/Data/Documents/CV-PeterSalib.docx"
 	delay 3
 	set d to document "CV-PeterSalib.docx"
 	save as d file name "/Users/petersalib/Library/Containers/com.microsoft.Word/Data/Documents/CV-PeterSalib.pdf" file format format PDF
